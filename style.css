@@ -1,97 +1,137 @@
-/* General styles */
-* { 
-  box-sizing: border-box; 
-  margin: 0; 
-  padding: 0; 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
 }
 
-body { 
-  font-family: 'Roboto', sans-serif; 
-  line-height: 1.6; 
-  background-color: #f8f9fa; 
-  color: #333; 
+body {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6;
+  background-color: #f8f9fa;
+  color: #333;
 }
 
-/* Header */
-header { 
-  background: #004466; 
-  color: #fff; 
-  padding: 1.5rem 2rem; 
-  text-align: center; 
+header {
+  background: #004466;
+  color: #fff;
+  padding: 1.5rem 2rem;
+  text-align: center;
 }
 
-/* Navigation */
-nav ul { 
-  list-style: none; 
-  display: flex; 
-  justify-content: center; 
-  gap: 2rem; 
-  padding: 1rem 0; 
-  background: #006080; 
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+  padding: 1rem 0;
+  background: #006080;
 }
 
-nav a { 
-  color: white; 
-  text-decoration: none; 
-  font-weight: bold; 
+nav a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
 }
 
-/* Sections */
-section { 
-  padding: 2rem; 
-  max-width: 1200px; 
-  margin: auto; 
+section {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: auto;
 }
 
-.services, .gallery { 
-  display: grid; 
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
-  gap: 1.5rem; 
+.services {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
 }
 
-.service-card, .gallery img { 
-  background: white; 
-  padding: 1rem; 
-  border-radius: 8px; 
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
+.service-card {
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
 
-.gallery img { 
-  width: 100%; 
-  height: auto; 
-  object-fit: cover; 
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
 }
 
-/* Footer */
-footer { 
-  background: #004466; 
-  color: white; 
-  text-align: center; 
-  padding: 1rem 0; 
-  margin-top: 2rem; 
+input, textarea, button {
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
 }
 
-/* Contact Form */
-form { 
-  display: flex; 
-  flex-direction: column; 
-  gap: 1rem; 
+button {
+  background: #006080;
+  color: white;
+  cursor: pointer;
+  border: none;
 }
 
-input, textarea, button { 
-  padding: 0.75rem; 
-  border: 1px solid #ccc; 
-  border-radius: 5px; 
+button:hover {
+  background: #004d66;
 }
 
-button { 
-  background: #006080; 
-  color: white; 
-  cursor: pointer; 
-  border: none; 
+footer {
+  background: #004466;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+  margin-top: 2rem;
 }
 
-button:hover { 
-  background: #004d66; 
+footer .socials {
+  margin-top: 0.5rem;
 }
 
+footer a {
+  color: #fff;
+  text-decoration: none;
+  margin: 0 0.3rem;
+}
+
+footer a:hover {
+  text-decoration: underline;
+}
+
+/* Carousel Styles */
+.carousel {
+  position: relative;
+  overflow: hidden;
+  max-width: 800px;
+  margin: 2rem auto;
+}
+
+.carousel-images {
+  display: flex;
+  transition: transform 0.5s ease-in-out;
+}
+
+.carousel-images img {
+  width: 100%;
+  flex: 0 0 100%;
+  border-radius: 8px;
+}
+
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background-color: rgba(0,0,0,0.5);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  font-size: 2rem;
+}
+
+.prev {
+  left: 10px;
+}
+
+.next {
+  right: 10px;
+}
