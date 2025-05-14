@@ -1,12 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Power Pros VA</title>
+  <link rel="stylesheet" href="style.css"/>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <!-- Link to external CSS file -->
-  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
@@ -16,11 +15,10 @@
 
   <nav>
     <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="gallery.html">Gallery</a></li>
-      <li><a href="contact.html">Contact</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#contact">Contact</a></li>
     </ul>
   </nav>
 
@@ -53,17 +51,21 @@
 
   <section id="gallery">
     <h2>Project Gallery</h2>
-    <div class="gallery">
-      <img src="https://via.placeholder.com/400x300" alt="Before and After">
-      <img src="https://via.placeholder.com/400x300" alt="Clean Siding">
-      <img src="https://via.placeholder.com/400x300" alt="Window Shine">
-      <img src="https://via.placeholder.com/400x300" alt="Gutter Work">
+    <div class="carousel">
+      <button class="carousel-btn prev">&#10094;</button>
+      <div class="carousel-images">
+        <img src="images/driveway.jpg" alt="Clean Driveway">
+        <img src="images/windows.jpg" alt="Shiny Windows">
+        <img src="images/siding.jpg" alt="Clean Siding">
+        <img src="images/gutter.jpg" alt="Gutter Cleaning">
+      </div>
+      <button class="carousel-btn next">&#10095;</button>
     </div>
   </section>
 
   <section id="contact">
     <h2>Contact Us</h2>
-    <form action="submit_form.php" method="POST">
+    <form>
       <input type="text" name="name" placeholder="Your Name" required>
       <input type="email" name="email" placeholder="Your Email" required>
       <input type="tel" name="phone" placeholder="Your Phone Number" required>
@@ -74,6 +76,27 @@
 
   <footer>
     <p>&copy; 2025 Power Pros VA. All rights reserved.</p>
+    <div class="socials">
+      <a href="https://facebook.com" target="_blank">Facebook</a> |
+      <a href="https://instagram.com" target="_blank">Instagram</a> |
+      <a href="https://twitter.com" target="_blank">Twitter</a>
+    </div>
   </footer>
+
+  <script>
+    const images = document.querySelector('.carousel-images');
+    const totalImages = images.children.length;
+    let index = 0;
+
+    document.querySelector('.next').addEventListener('click', () => {
+      index = (index + 1) % totalImages;
+      images.style.transform = `translateX(-${index * 100}%)`;
+    });
+
+    document.querySelector('.prev').addEventListener('click', () => {
+      index = (index - 1 + totalImages) % totalImages;
+      images.style.transform = `translateX(-${index * 100}%)`;
+    });
+  </script>
 </body>
 </html>
