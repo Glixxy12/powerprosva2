@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Power Pros VA</title>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <style>
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { font-family: 'Roboto', sans-serif; line-height: 1.6; background-color: #f8f9fa; color: #333; }
+    header { background: #004466; color: #fff; padding: 1.5rem 2rem; text-align: center; }
+    nav ul { list-style: none; display: flex; justify-content: center; gap: 2rem; padding: 1rem 0; background: #006080; }
+    nav a { color: white; text-decoration: none; font-weight: bold; }
+    section { padding: 2rem; max-width: 1200px; margin: auto; }
+    .services, .gallery { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 1.5rem; }
+    .service-card, .gallery img { background: white; padding: 1rem; border-radius: 8px; box-shadow: 0 2px 5px rgba(0,0,0,0.1); }
+    .gallery img { width: 100%; height: auto; object-fit: cover; }
+    footer { background: #004466; color: white; text-align: center; padding: 1rem 0; margin-top: 2rem; }
+    form { display: flex; flex-direction: column; gap: 1rem; }
+    input, textarea, button { padding: 0.75rem; border: 1px solid #ccc; border-radius: 5px; }
+    button { background: #006080; color: white; cursor: pointer; border: none; }
+    button:hover { background: #004d66; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Power Pros VA</h1>
+    <p>Professional Pressure Washing & Exterior Cleaning Services</p>
+  </header>
+  
+  <nav>
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <section id="about">
+    <h2>About Us</h2>
+    <p>Founded in 2019 and proudly serving Harrisonburg, VA, Power Pros VA delivers expert exterior cleaning services for both residential and commercial properties. From pressure washing to window and gutter cleaning, we’re committed to restoring and maintaining the beauty of your property. Available 7 AM – 5 PM, our team brings professionalism and precision to every job.</p>
+  </section>
+
+  <section id="services">
+    <h2>Our Services</h2>
+    <div class="services">
+      <div class="service-card">
+        <h3>Pressure Washing</h3>
+        <p>Remove tough grime, dirt, and algae from driveways, sidewalks, decks, and more. Our pressure washing services restore the look and safety of your surfaces.</p>
+      </div>
+      <div class="service-card">
+        <h3>Window Cleaning</h3>
+        <p>Crystal-clear, streak-free windows that let the light shine in. We clean both interior and exterior glass for a polished look every time.</p>
+      </div>
+      <div class="service-card">
+        <h3>Gutter Cleaning</h3>
+        <p>Prevent water damage with our thorough gutter cleaning service. We remove debris to keep your gutters flowing and your foundation protected.</p>
+      </div>
+      <div class="service-card">
+        <h3>Exterior Cleaning</h3>
+        <p>From siding to fences, we wash away dirt, mildew, and buildup to refresh your home’s entire exterior.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="gallery">
+    <h2>Project Gallery</h2>
+    <div class="gallery">
+      <img src="https://via.placeholder.com/400x300" alt="Before and After">
+      <img src="https://via.placeholder.com/400x300" alt="Clean Siding">
+      <img src="https://via.placeholder.com/400x300" alt="Window Shine">
+      <img src="https://via.placeholder.com/400x300" alt="Gutter Work">
+    </div>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form>
+      <input type="text" name="name" placeholder="Your Name" required>
+      <input type="email" name="email" placeholder="Your Email" required>
+      <input type="tel" name="phone" placeholder="Your Phone Number" required>
+      <textarea name="message" placeholder="How can we help you?" rows="5" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Power Pros VA. All rights reserved.</p>
+  </footer>
+</body>
+</html>
