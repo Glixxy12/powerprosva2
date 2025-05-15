@@ -1,20 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Power Pros VA</title>
   <link rel="stylesheet" href="style.css"/>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <!-- Link to external CSS file -->
+  <link rel="stylesheet" href="style.css">
 </head>
 <body>
   <header>
-    <h1>Power Pros VA</h1>
-    <p>Professional Pressure Washing & Exterior Cleaning Services</p>
-  </header>
+@@ -16,11 +15,10 @@ <h1>Power Pros VA</h1>
 
   <nav>
     <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="gallery.html">Gallery</a></li>
+      <li><a href="contact.html">Contact</a></li>
       <li><a href="#about">About</a></li>
       <li><a href="#services">Services</a></li>
       <li><a href="#gallery">Gallery</a></li>
@@ -22,35 +29,15 @@
     </ul>
   </nav>
 
-  <section id="about">
-    <h2>About Us</h2>
-    <p>Founded in 2019 and proudly serving Harrisonburg, VA, Power Pros VA delivers expert exterior cleaning services for both residential and commercial properties. From pressure washing to window and gutter cleaning, we’re committed to restoring and maintaining the beauty of your property. Available 7 AM – 5 PM, our team brings professionalism and precision to every job.</p>
-  </section>
-
-  <section id="services">
-    <h2>Our Services</h2>
-    <div class="services">
-      <div class="service-card">
-        <h3>Pressure Washing</h3>
-        <p>Remove tough grime, dirt, and algae from driveways, sidewalks, decks, and more. Our pressure washing services restore the look and safety of your surfaces.</p>
-      </div>
-      <div class="service-card">
-        <h3>Window Cleaning</h3>
-        <p>Crystal-clear, streak-free windows that let the light shine in. We clean both interior and exterior glass for a polished look every time.</p>
-      </div>
-      <div class="service-card">
-        <h3>Gutter Cleaning</h3>
-        <p>Prevent water damage with our thorough gutter cleaning service. We remove debris to keep your gutters flowing and your foundation protected.</p>
-      </div>
-      <div class="service-card">
-        <h3>Exterior Cleaning</h3>
-        <p>From siding to fences, we wash away dirt, mildew, and buildup to refresh your home’s entire exterior.</p>
-      </div>
-    </div>
-  </section>
+@@ -53,17 +51,21 @@ <h3>Exterior Cleaning</h3>
 
   <section id="gallery">
     <h2>Project Gallery</h2>
+    <div class="gallery">
+      <img src="https://via.placeholder.com/400x300" alt="Before and After">
+      <img src="https://via.placeholder.com/400x300" alt="Clean Siding">
+      <img src="https://via.placeholder.com/400x300" alt="Window Shine">
+      <img src="https://via.placeholder.com/400x300" alt="Gutter Work">
     <div class="carousel">
       <button class="carousel-btn prev">&#10094;</button>
       <div class="carousel-images">
@@ -65,14 +52,12 @@
 
   <section id="contact">
     <h2>Contact Us</h2>
+    <form action="submit_form.php" method="POST">
     <form>
       <input type="text" name="name" placeholder="Your Name" required>
       <input type="email" name="email" placeholder="Your Email" required>
       <input type="tel" name="phone" placeholder="Your Phone Number" required>
-      <textarea name="message" placeholder="How can we help you?" rows="5" required></textarea>
-      <button type="submit">Send Message</button>
-    </form>
-  </section>
+@@ -74,6 +76,27 @@ <h2>Contact Us</h2>
 
   <footer>
     <p>&copy; 2025 Power Pros VA. All rights reserved.</p>
@@ -90,12 +75,12 @@
 
     document.querySelector('.next').addEventListener('click', () => {
       index = (index + 1) % totalImages;
-      images.style.transform = translateX(-${index * 100}%);
+      images.style.transform = `translateX(-${index * 100}%)`;
     });
 
     document.querySelector('.prev').addEventListener('click', () => {
       index = (index - 1 + totalImages) % totalImages;
-      images.style.transform = translateX(-${index * 100}%);
+      images.style.transform = `translateX(-${index * 100}%)`;
     });
   </script>
 </body>
