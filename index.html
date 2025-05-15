@@ -3,78 +3,68 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact Us - Power Pros VA</title>
-  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet"/>
+  <title>Power Pros VA - Pressure Washing</title>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="style.css"/>
 </head>
 <body>
-  <header>
-    <h1>Power Pros VA</h1>
-    <p>Professional Pressure Washing & Exterior Cleaning Services</p>
+
+  <header class="hero">
+    <nav class="navbar">
+      <h1>Power Pros VA</h1>
+      <ul class="nav-links">
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#gallery">Gallery</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <div class="hero-content">
+      <h2>Professional Pressure Washing & Exterior Cleaning</h2>
+      <p>Restoring beauty to your property with expert cleaning services.</p>
+      <a href="#contact" class="cta-button">Get a Free Quote</a>
+    </div>
   </header>
 
-  <nav>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="about.html">About</a></li>
-      <li><a href="services.html">Services</a></li>
-      <li><a href="gallery.html">Gallery</a></li>
-      <li><a href="contact.html">Contact</a></li>
-    </ul>
-  </nav>
+  <section id="about">
+    <h2>Why Choose Us?</h2>
+    <p>We offer top-tier pressure washing solutions to keep your home and business sparkling clean.</p>
+  </section>
 
-  <main>
-    <section>
-      <h2>Contact Us</h2>
-      <form id="contactForm" action="https://formspree.io/f/mgvkrlel" method="POST">
-        <input type="text" name="name" placeholder="Your Name" required />
-        <input type="email" name="email" placeholder="Your Email" required />
-        <input type="tel" name="phone" placeholder="Your Phone Number" required />
-        <textarea name="message" placeholder="How can we help you?" rows="5" required></textarea>
-        <button type="submit">Send Message</button>
-      </form>
+  <section id="services">
+    <h2>Our Services</h2>
+    <p>Driveway Cleaning, Roof Washing, Commercial Cleaning & More.</p>
+  </section>
 
-      <div id="thankYouMessage" style="display:none; margin-top:20px; color:green; font-weight:bold;">
-        Thanks! We'll get back to you as soon as possible.
-      </div>
-    </section>
-  </main>
+  <section id="gallery">
+    <h2>Project Gallery</h2>
+    <p>Check out our latest cleaning transformations.</p>
+  </section>
+
+  <section id="contact">
+    <h2>Contact Us</h2>
+    <form id="contactForm" action="https://formspree.io/f/mgvkrlel" method="POST">
+      <input type="text" name="name" placeholder="Your Name" required />
+      <input type="email" name="email" placeholder="Your Email" required />
+      <input type="tel" name="phone" placeholder="Your Phone Number" required />
+      <textarea name="message" placeholder="How can we help you?" rows="5" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+    <div id="thankYouMessage" style="display:none;">Thanks! We'll get back to you soon.</div>
+  </section>
 
   <footer>
     <p>&copy; 2025 Power Pros VA. All rights reserved.</p>
-    <div class="social-links">
-      <a href="https://www.facebook.com" target="_blank">Facebook</a> |
-      <a href="https://www.instagram.com" target="_blank">Instagram</a> |
-      <a href="https://www.twitter.com" target="_blank">Twitter</a>
-    </div>
   </footer>
 
   <script>
-    document.addEventListener('DOMContentLoaded', () => {
-      const form = document.getElementById('contactForm');
-      const thankYou = document.getElementById('thankYouMessage');
-
-      form.addEventListener('submit', function (e) {
-        e.preventDefault();
-        const data = new FormData(form);
-
-        fetch(form.action, {
-          method: 'POST',
-          body: data,
-          headers: { 'Accept': 'application/json' }
-        }).then(response => {
-          if (response.ok) {
-            form.reset();
-            form.style.display = 'none';
-            thankYou.style.display = 'block';
-          } else {
-            alert('There was an error sending the message.');
-          }
-        }).catch(error => {
-          alert('There was a problem submitting the form.');
-        });
-      });
+    document.getElementById("contactForm").addEventListener("submit", function(e) {
+      e.preventDefault();
+      this.style.display = "none";
+      document.getElementById("thankYouMessage").style.display = "block";
     });
   </script>
+
 </body>
 </html>
